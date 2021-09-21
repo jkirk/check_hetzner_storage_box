@@ -63,11 +63,10 @@ def check_storage_box(storage_box, user, password, warning, critical):
     if free <= critical:
         print('CRITICAL - Free disk size of Storage Box #{} ({}) '
               'is less than {}% of the quota!'
-              '|Storage Box #{}={}KB;{};{};0;{}'
+              '|storagebox_usage={}KB;{};{};0;{}'
               .format(storage_box,
                       name,
                       critical,
-                      storage_box,
                       usage,
                       perf_warning,
                       perf_critical,
@@ -77,11 +76,10 @@ def check_storage_box(storage_box, user, password, warning, critical):
     elif free <= warning:
         print('WARNING - Free disk size of Storage Box #{} ({}) '
               'is less than {}% of the quota!'
-              '|Storage Box #{}={}KB;{};{};0;{}'
+              '|storagebox_usage={}KB;{};{};0;{}'
               .format(storage_box,
                       name,
                       warning,
-                      storage_box,
                       usage,
                       perf_warning,
                       perf_critical,
@@ -91,11 +89,10 @@ def check_storage_box(storage_box, user, password, warning, critical):
     elif warning < free:
         print('OK - Free disk size of Storage Box #{} ({}) '
               'is currently {}%'
-              '|Storage Box #{}={}KB;{};{};0;{}'
+              '|storagebox_usage={}KB;{};{};0;{}'
               .format(storage_box,
                       name,
                       free,
-                      storage_box,
                       usage,
                       perf_warning,
                       perf_critical,
